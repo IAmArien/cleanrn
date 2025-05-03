@@ -1,3 +1,19 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@domain/entities": ["domain/entities/index"],
+      "@domain/usecases": ["domain/usecases/index"],
+      "@adapters/datasource": ["adapters/datasource/index"],
+      "@adapters/hooks": ["adapters/hooks/index"],
+      "@frameworks": ["frameworks/index"],
+      "@presentation": ["presentation/index"],
+      "@types": ["types/index"],
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES6",
+    "module": "ESNext"
+  }
 }
