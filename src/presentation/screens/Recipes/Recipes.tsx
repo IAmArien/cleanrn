@@ -22,7 +22,6 @@ export function Recipes(): JSX.Element {
 
   return (
     <View>
-
     </View>
   );
 };

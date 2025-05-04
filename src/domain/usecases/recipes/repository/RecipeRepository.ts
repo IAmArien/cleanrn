@@ -5,18 +5,8 @@
  */
 
 import { Recipe, Recipes } from "@domain/entities";
+import { RecipesDataSource } from "@domain/usecases";
 import { APIState } from "@types";
-
-/**
- * Defining the structure of the Recipes Feature wherein we can get all recipes
- * and a specific recipe by using its ID. This structure is what we called
- * DataSource which represents the functions that UseCases can be used in such
- * abstracted way
- */
-export interface RecipesDataSource {
-  getRecipes: () => Promise<APIState<Recipes, Error>>;
-  getRecipeById: (recipeId: number) => Promise<APIState<Recipe, Error>>;
-}
 
 /**
  * This repository bridges the DataSource to UseCases in abstract way. It does
