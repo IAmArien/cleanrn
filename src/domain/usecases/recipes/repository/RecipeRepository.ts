@@ -15,11 +15,7 @@ import { APIState } from "@types";
  */
 export class RecipesRepository {
 
-  private dataSource: RecipesDataSource;
-
-  constructor(dataSource: RecipesDataSource) {
-    this.dataSource = dataSource;
-  }
+  constructor(private dataSource: RecipesDataSource) {}
 
   getRecipes(): Promise<APIState<Recipes, Error>> {
     return this.dataSource.getRecipes();

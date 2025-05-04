@@ -10,11 +10,7 @@ import { RecipesRepository } from "@domain/usecases";
 
 export class GetRecipes {
 
-  private repository: RecipesRepository;
-
-  constructor(repository: RecipesRepository) {
-    this.repository = repository;
-  }
+  constructor(private repository: RecipesRepository) {}
 
   invoke(): Promise<APIState<Recipes, Error>> {
     return this.repository.getRecipes();
