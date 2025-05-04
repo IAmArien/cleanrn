@@ -1,0 +1,18 @@
+/**
+ * Property of the Metropolitan Bank & Trust Co.
+ * Reuse as a whole or in part is prohibited without permission.
+ * Created by the Product Engineering team/Digital Banking Division
+ */
+
+import { Products } from "@domain/entities";
+import { ProductsRepository } from "@domain/usecases";
+import { APIState } from "@types";
+
+export class GetProducts {
+
+  constructor(private repository: ProductsRepository) {}
+
+  invoke(): Promise<APIState<Products, Error>> {
+    return this.repository.getProducts();
+  }
+}

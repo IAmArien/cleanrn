@@ -8,3 +8,6 @@ export * from './recipes/usecases/GetRecipes';
 export * from './recipes/usecases/GetRecipeById';
 export * from './recipes/repository/RecipeDataSource';
 export * from './recipes/repository/RecipeRepository';
+export * from './products/usecases/GetProducts';
+export * from './products/repository/ProductsDataSource';
+export * from './products/repository/ProductsRepository';

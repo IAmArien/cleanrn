@@ -5,3 +5,4 @@
  */
 
 export * from './recipes/RecipesRepository';
+export * from './products/ProductsRepository';

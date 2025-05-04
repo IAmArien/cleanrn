@@ -6,3 +6,5 @@
 
 import "./repository/recipes/container";
 import "./usecases/recipes/container";
+import "./repository/products/container";
+import "./usecases/products/container";

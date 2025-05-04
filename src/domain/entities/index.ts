@@ -5,3 +5,4 @@
  */
 
 export * from './recipes/Recipes';
+export * from './products/Products';

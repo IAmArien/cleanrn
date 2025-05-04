@@ -4,13 +4,14 @@
  * Created by the Product Engineering team/Digital Banking Division
  */
 
-import { useGetRecipeById, useGetRecipes } from "@adapters/hooks";
+import { useGetProducts, useGetRecipeById, useGetRecipes } from "@adapters/hooks";
 import { JSX, useEffect } from "react";
 import { View } from "react-native";
 
 export function Recipes(): JSX.Element {
   const { data: recipes } = useGetRecipes();
   const { data: recipe } = useGetRecipeById(1);
+  const { data: products } = useGetProducts();
   
   useEffect(() => {
     console.log('recipes', JSON.stringify(recipes));
@@ -19,6 +20,10 @@ export function Recipes(): JSX.Element {
   useEffect(() => {
     console.log('recipe', JSON.stringify(recipe));
   }, [recipe]);
+
+  useEffect(() => {
+    console.log('products', JSON.stringify(products));
+  }, [products]);
 
   return (
     <View>

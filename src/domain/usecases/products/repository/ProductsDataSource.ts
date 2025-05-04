@@ -4,5 +4,9 @@
  * Created by the Product Engineering team/Digital Banking Division
  */
 
-export * from './recipes/RecipesDataSourceImpl';
-export * from './products/ProductsDataSourceImpl';
+import { Products } from "@domain/entities";
+import { APIState } from "@types";
+
+export interface ProductsDataSource {
+  getProducts: () => Promise<APIState<Products, Error>>;
+}

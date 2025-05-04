@@ -6,3 +6,4 @@
 
 export * from './recipes/useGetRecipes';
 export * from './recipes/useGetRecipeById';
+export * from './products/useGetProducts';
